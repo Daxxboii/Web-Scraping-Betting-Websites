@@ -26,12 +26,21 @@ IsoDate = (input("Enter Date(ISO Format): "))
 
 
 yourdate = parser.parse(IsoDate)
-print(yourdate.date())
+
 
 
 currDate = datetime.datetime.now()
-print(currDate.date())
 
+DateToSearch =""
+
+
+if(yourdate.date()==currDate.date()):
+    DateToSearch = "TODAY"
+    
+else:
+    DateToSearch = "0"+(str)(yourdate.day)+"/"+"0"+(str)(yourdate.month)
+
+print(DateToSearch)
 
 
 
