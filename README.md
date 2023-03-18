@@ -7,4 +7,5 @@
 - Add everything to config.py
 
 > Note : The authentication link from ```MailHelper.py``` will be used to log in to the browser through  ```OddsJam.py```
+
 > Note : config.py can be replaced by github secrets and more protected variables
