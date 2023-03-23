@@ -1,8 +1,8 @@
 import imaplib, email
-import config
+import Credentials
 
-user = config.Email_Address
-password = config.Password
+user = Credentials.Email_Address
+password = Credentials.Password
 imap_url = 'imap.gmail.com'
 
 # Function to get email content part i.e its body part
@@ -36,7 +36,7 @@ con.login(user, password)
 con.select('Inbox')
 
 
-msgs = get_emails(search('FROM', config.OddsJam_EmailAddress, con))
+msgs = get_emails(search('FROM', Credentials.OddsJam_EmailAddress, con))
 
 
 
