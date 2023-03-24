@@ -1,8 +1,12 @@
 import os
 
 def Output(content,filename):
-    if(os.path.isfile(filename)):
-        os.remove(filename)
+    if(os.path.isfile("Scraped/"+filename)):
+        os.remove("Scraped/"+filename)
 
-    with open(filename, "a") as f:
+    with open("Scraped/"+filename, "a") as f:
                         print(content,file=f)
+
+def AppendOutput(content,filename):
+        with open("Scraped/"+filename,"a") as f:
+                print(content,file=f)
